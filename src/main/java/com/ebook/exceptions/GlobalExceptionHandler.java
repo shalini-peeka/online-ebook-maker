@@ -32,7 +32,7 @@ public class GlobalExceptionHandler {
 //		return new ResponseEntity<ApiResponse>(apiResponse,HttpStatus.NOT_FOUND);
 //	}
 	@ExceptionHandler({InvalidUserException.class,
-			IdNotFoundException.class,NoBookException.class,InvalidInputException.class,AlreadyExsistException.class,DataViolationException.class})
+			IdNotFoundException.class,NoBookException.class,InvalidInputException.class,DataViolationException.class})
 	public ResponseEntity<ApiResponse> resourceNotFoundExceptionHandler(Exception res){
 		String message=res.getMessage();
 		System.out.println(message+" this is error");
@@ -41,7 +41,7 @@ public class GlobalExceptionHandler {
 	}
 	
 	
-	@ExceptionHandler(MethodArgumentNotValidException.class)
+	@ExceptionHandler({MethodArgumentNotValidException.class,AlreadyExsistException.class})
 	public ResponseEntity<String> handleMethodArgNotValidException(MethodArgumentNotValidException ex){
 	    String defaultMessage = ex.getBindingResult().getAllErrors().get(0).getDefaultMessage();
 	    return new ResponseEntity<String>(defaultMessage, HttpStatus.BAD_REQUEST);
