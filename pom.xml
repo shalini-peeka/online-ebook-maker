@@ -7,11 +7,11 @@
 		<version>2.7.8</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.propertyFinder</groupId>
-	<artifactId>propertyFinder</artifactId>
+	<groupId>com.example.ebookMaker</groupId>
+	<artifactId>ebookMaker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>propertyFinder</name>
-	<description>propertyFinder</description>
+	<name>ebookMaker</name>
+	<description>eBookmaker</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
